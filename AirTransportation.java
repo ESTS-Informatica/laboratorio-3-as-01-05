@@ -40,4 +40,18 @@ public class AirTransportation extends Transport
     {
         newNumberOfContainers = numberOfContainers;
     }
+    
+    public String getTransportType() {
+        return "Transporte aéreo";
+    }
+    
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("\n%15s: %s\n", "Tipo Transporte", getTransportType()));  
+        sb.append(String.format("%15s: %4.2f%%\n", "Honorarios", this.fees));
+        sb.append(String.format("%15s: %4.2f€\n", "Preço Final", getPriceWithFees()));
+     
+        return sb.toString();
+    }
 }

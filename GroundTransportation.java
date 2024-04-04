@@ -8,8 +8,7 @@
 public class GroundTransportation extends Transport
 {
     private String licensePlate;
-    private static int fees = 3;
-    
+    private static double fees = 3;
     
     /**
      * Construtor para objetos da classe GroundTransportation
@@ -27,5 +26,19 @@ public class GroundTransportation extends Transport
     public void setLicensePlate(String newLicensePlate)
     {
         newLicensePlate = licensePlate;
+    }
+    
+    public String getTransportType() {
+        return "Transporte terrestre";
+    }
+    
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("\n%15s: %s\n", "Tipo Transporte", getTransportType()));  
+        sb.append(String.format("%15s: %4.2f%%\n", "Honorarios", this.fees));
+        sb.append(String.format("%15s: %4.2f€\n", "Preço Final", getPriceWithFees()));
+     
+        return sb.toString();
     }
 }
