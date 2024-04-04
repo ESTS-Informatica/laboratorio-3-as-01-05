@@ -15,21 +15,29 @@ public class AirTransportation extends Transport
     /**
      * Construtor para objetos da classe AirTransportation
      */
-    public AirTransportation()
+    public AirTransportation(String name, int numberOfContainers)
     {
-        // inicializa variáveis de instância
-        x = 0;
+        this.name = name;
+        this.numberOfContainers = numberOfContainers;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
+    public String getName()
     {
-        // escreva seu código aqui
-        return x + y;
+        return name;
+    }
+    
+    public int getNumberOfContainers()
+    {
+        return numberOfContainers;
+    }
+    
+    public void setName(String newName)
+    {
+        newName = name;
+    }
+    
+    public void setNumberOfContainers(int newNumberOfContainers)
+    {
+        newNumberOfContainers = numberOfContainers;
     }
 }
