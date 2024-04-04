@@ -27,11 +27,13 @@ public class Van extends GroundTransportation
         newPackages = packages;
     }
     
-            public String toString() {
+    public String toString() {
         final StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format("\n%15s: %s\n", "Matricula", getLicensePlate())); 
-        sb.append(String.format("\n%15s: %s\n", "Pacotes", getPackages()));  
+        sb.append(String.format("\n%15s: %s\n", "Tipo Transporte", getTransportType()));  
+        sb.append(String.format("%15s: %s\n", "Matricula", getLicensePlate())); 
+        sb.append(String.format("%15s: %s\n", "Pacotes", getPackages()));
+        sb.append(String.format("%15s: %4.2f€\n", "Preço Final", getPriceWithFees()));
      
         return sb.toString();
     }
